@@ -1,4 +1,4 @@
-// Non-Primitive types
+// Non-Primitive/reference types
 // array, object
 // TS : tuple
 
@@ -23,7 +23,24 @@ let coordinates = [100, 100];
 let circle: [number, number] = [10, 10];
 let brand: [string, string] = ["gucci", "BMW"];
 
-// mixed data type tupel
+// mixed data type tuple
 let nameAndRoll: [string, number] = ["shahariat", 51];
 
 let destinationAndTime: [string, string, number] = ["Dhaka", "Chattogram", 3];
+
+// <--object-->
+
+const user: {
+    university: "IIUC"; //value=>literal type
+    firstName: string;
+    middleName?: string;  //optional type
+    lastName: string;
+    readonly id: number; //access modifier
+} = {
+    university: "IIUC",
+    firstName: "shahariat",
+    lastName: "hossen",
+    id: 51,
+}
+
+console.log(user);
