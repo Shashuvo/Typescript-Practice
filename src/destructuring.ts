@@ -22,5 +22,3 @@ console.log(firstName, middleName, myLastName, myGender, favouriteColor);
 const friends = ["kata", "bata", "mata"];
 
 const [, , myBestFriend] = friends;
-console.log(myBestFriend);
-
