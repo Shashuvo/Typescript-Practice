@@ -29,19 +29,19 @@ class Teacher extends Person {
     }
 }
 
-// const isStudent = (user: Person) => {
-//     return user instanceof Student;
-// }
+const isStudent = (user: Person): user is Student => {
+    return user instanceof Student;
+}
 
-// const isTeacher = (user: Person) => {
-//     return user instanceof Teacher;
-// }
+const isTeacher = (user: Person): user is Teacher => {
+    return user instanceof Teacher;
+}
 
 const getUserInfo = (user: Person) => {
-    if (user instanceof Student) {
+    if (isStudent(user)) {
         user.doClass(10)
     }
-    else if (user instanceof Teacher) {
+    else if (isTeacher(user)) {
         user.takeClass(10)
     }
 }
